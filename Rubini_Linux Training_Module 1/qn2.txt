@@ -1,0 +1,16 @@
+2) Create a file and remove write permission for group user alone.
+
+Output:
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ touch qn2.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls
+qn1.txt  qn2.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls -l
+total 0
+-rwxrwxrwx 1 vboxuser vboxuser 0 Jan 23 09:18 qn1.txt
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 09:23 qn2.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ chmod g-w qn2.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls -l
+total 0
+-rwxrwxrwx 1 vboxuser vboxuser 0 Jan 23 09:18 qn1.txt
+-rw-r--r-- 1 vboxuser vboxuser 0 Jan 23 09:23 qn2.txt
