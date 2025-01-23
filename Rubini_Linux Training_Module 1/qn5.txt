@@ -1,0 +1,21 @@
+5) Create 3 files in a dir1 and re-direct the output of list command with sorted by timestamp of the files to a file
+
+Output :
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls
+qn1.txt  qn2.txt  qn3
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ mkdir qn5
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ cd qn5
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn5$ ls
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn5$ touch 5a.txt 5b.txt 5c.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn5$ ls
+5a.txt  5b.txt  5c.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn5$ ls -lt > all_files.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn5$ ls
+5a.txt  5b.txt  5c.txt  all_files.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn5$ cat all_files.txt
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 09:50 all_files.txt
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 09:48 5a.txt
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 09:48 5b.txt
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 09:48 5c.txt
