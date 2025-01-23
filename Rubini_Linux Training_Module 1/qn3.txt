@@ -1,0 +1,22 @@
+3) Create a file and add a softlink to the file in different directory (Eg : Create a file in dir1/dir2/file and create a softlink for file inside dir1)
+
+OUTPUT :
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls
+qn1.txt  qn2.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ mkdir -p qn3/qn3a
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ cd qn3/qn3a
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3/qn3a$ ls
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3/qn3a$ echo "Soft Link created successfully" > link_creation.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3/qn3a$ ls
+link_creation.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3/qn3a$ cat link_creation.txt
+Soft Link created successfully
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3/qn3a$ cd ..
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3$ ln -s qn3a/link_creation.txt soft_link
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3$ ls -l
+total 4
+drwxrwxr-x 2 vboxuser vboxuser 4096 Jan 23 09:33 qn3a
+lrwxrwxrwx 1 vboxuser vboxuser   22 Jan 23 09:34 soft_link -> qn3a/link_creation.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1/qn3$ cat soft_link
+Soft Link created successfully
