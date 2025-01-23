@@ -1,0 +1,16 @@
+1) Create a file and add executable permission to all users (user, group and others)
+
+Output :
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ touch qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls -l
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 09:18 qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ chmod +x qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls -l
+total 0
+-rwxrwxr-x 1 vboxuser vboxuser 0 Jan 23 09:18 qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ chmod 777 qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_1$ ls -l
+total 0
+-rwxrwxrwx 1 vboxuser vboxuser 0 Jan 23 09:18 qn1.txt
