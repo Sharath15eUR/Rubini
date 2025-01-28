@@ -1,0 +1,26 @@
+2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt.
+
+Output :
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ vi config.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ cat config.txt
+# Sample Configuration File
+server = localhost
+database_host = localhost
+port = 3306
+api_url = http://localhost:8080
+log_path = /var/log/localhost
+timeout = 30
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+config.txt  qn1.txt  updated_config.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ cat updated_config.txt
+# Sample Configuration File
+server = 127.0.0.1
+database_host = 127.0.0.1
+port = 3306
+api_url = http://127.0.0.1:8080
+log_path = /var/log/127.0.0.1
+timeout = 30
