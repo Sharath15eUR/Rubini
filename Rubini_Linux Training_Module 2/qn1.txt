@@ -1,0 +1,107 @@
+1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+
+Output :
+
+vboxuser@SampleUbuntu:~$ su
+Password: 
+root@SampleUbuntu:/home/vboxuser# ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+root@SampleUbuntu:/home/vboxuser# cd ..
+root@SampleUbuntu:/home# cd ..
+root@SampleUbuntu:/# ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr
+root@SampleUbuntu:/# cd bin
+root@SampleUbuntu:/bin# ls -lrth
+total 166M
+-rwxr-xr-x 1 root root      17K Nov 26  2006  dirsplit
+-rwxr-xr-x 1 root root      273 May 20  2016  apturl
+-rwxr-xr-x 1 root root     3.8K Aug 12  2017  laptop-detect
+-rwxr-xr-x 1 root root     1.1K Aug 28  2017  lspgpot
+-rwxr-xr-x 1 root root     9.3K Feb 27  2019  dh_installxmlcatalogs
+-rwxr-xr-x 1 root root     3.6K Aug 26  2019  lsb_release
+-rwxr-xr-x 1 root root       30 Jan 29  2020  rgrep
+-rwxr-xr-x 1 root root     1.6K May 16  2020  dh_perl_openssl
+-rwxr-xr-x 1 root root      11K Jun 16  2020  ucfr
+lrwxrwxrwx 1 root root       10 Jan 20 13:48  chardet -> chardetect
+lrwxrwxrwx 1 root root       11 Jan 20 13:48  compose -> run-mailcap
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  cpp-11 -> x86_64-linux-gnu-cpp-11
+lrwxrwxrwx 1 root root        6 Jan 20 13:48  cpp -> cpp-11
+lrwxrwxrwx 1 root root        6 Jan 20 13:48  ctstat -> lnstat
+lrwxrwxrwx 1 root root       20 Jan 20 13:48  desktop-file-edit -> desktop-file-install
+lrwxrwxrwx 1 root root       18 Jan 20 13:48  distro-info -> ubuntu-distro-info
+lrwxrwxrwx 1 root root        8 Jan 20 13:48  domainname -> hostname
+lrwxrwxrwx 1 root root        8 Jan 20 13:48  dnsdomainname -> hostname
+lrwxrwxrwx 1 root root       24 Jan 20 13:48  editor -> /etc/alternatives/editor
+lrwxrwxrwx 1 root root       11 Jan 20 13:48  edit -> run-mailcap
+lrwxrwxrwx 1 root root       20 Jan 20 13:48  ex -> /etc/alternatives/ex
+lrwxrwxrwx 1 root root        5 Jan 20 13:48  foo2zjs-icc2ps -> psicc
+lrwxrwxrwx 1 root root       21 Jan 20 13:48  ftp -> /etc/alternatives/ftp
+lrwxrwxrwx 1 root root        8 Jan 20 13:48  fwupdagent -> fwupdmgr
+lrwxrwxrwx 1 root root       26 Jan 20 13:48  futurize -> /etc/alternatives/futurize
+lrwxrwxrwx 1 root root       11 Jan 20 13:48  fusermount -> fusermount3
+lrwxrwxrwx 1 root root        3 Jan 20 13:48  geqn -> eqn
+lrwxrwxrwx 1 root root       11 Jan 20 13:48  gjs -> gjs-console
+lrwxrwxrwx 1 root root       12 Jan 20 13:48  ginstall-info -> install-info
+lrwxrwxrwx 1 root root       50 Jan 20 13:48  gnome-characters -> ../share/org.gnome.Characters/org.gnome.Characters
+lrwxrwxrwx 1 root root       15 Jan 20 13:48  gnome-keyring -> gnome-keyring-3
+lrwxrwxrwx 1 root root        4 Jan 20 13:48  gnome-help -> yelp
+lrwxrwxrwx 1 root root       35 Jan 20 13:48  gnome-text-editor -> /etc/alternatives/gnome-text-editor
+lrwxrwxrwx 1 root root       35 Jan 20 13:48  gnome-www-browser -> /etc/alternatives/gnome-www-browser
+lrwxrwxrwx 1 root root        3 Jan 20 13:48  gpic -> pic
+lrwxrwxrwx 1 root root       34 Jan 20 13:48  grub-ntldr-img -> ../lib/grub/i386-pc/grub-ntldr-img
+lrwxrwxrwx 1 root root        3 Jan 20 13:48  gtbl -> tbl
+lrwxrwxrwx 1 root root       41 Jan 20 13:48  gstreamer-codec-install -> /etc/alternatives/gstreamer-codec-install
+lrwxrwxrwx 1 root root        7 Jan 20 13:48  hd -> hexdump
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  hp-clean -> ../share/hplip/clean.py
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  hp-check -> ../share/hplip/check.py
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  hp-align -> ../share/hplip/align.py
+lrwxrwxrwx 1 root root       26 Jan 20 13:48  hp-timedate -> ../share/hplip/timedate.py
+lrwxrwxrwx 1 root root       26 Jan 20 13:48  hp-testpage -> ../share/hplip/testpage.py
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  hp-setup -> ../share/hplip/setup.py
+lrwxrwxrwx 1 root root       22 Jan 20 13:48  hp-scan -> ../share/hplip/scan.py
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  hp-query -> ../share/hplip/query.py
+lrwxrwxrwx 1 root root       23 Jan 20 13:48  hp-probe -> ../share/hplip/probe.py
+lrwxrwxrwx 1 root root       24 Jan 20 13:48  hp-plugin -> ../share/hplip/plugin.py
+lrwxrwxrwx 1 root root       27 Jan 20 13:48  hp-pkservice -> ../share/hplip/pkservice.py
+lrwxrwxrwx 1 root root       25 Jan 20 13:48  hp-makeuri -> ../share/hplip/makeuri.py
+lrwxrwxrwx 1 root root       28 Jan 20 13:48  hp-logcapture -> ../share/hplip/logcapture.py
+lrwxrwxrwx 1 root root       24 Jan 20 13:48  hp-levels -> ../share/hplip/levels.py
+lrwxrwxrwx 1 root root       22 Jan 20 13:48  hp-info -> ../share/hplip/info.py
+lrwxrwxrwx 1 root root       26 Jan 20 13:48  hp-firmware -> ../share/hplip/firmware.py
+lrwxrwxrwx 1 root root       24 Jan 20 13:48  hp-doctor -> ../share/hplip/doctor.py
+lrwxrwxrwx 1 root root       36 Jan 20 13:48  hp-config_usb_printer -> ../share/hplip/config_usb_printer.py
+lrwxrwxrwx 1 root root       26 Jan 20 13:48  hp-colorcal -> ../share/hplip/colorcal.py
+root@SampleUbuntu:/bin# 
+root@SampleUbuntu:/bin# 
+root@SampleUbuntu:/bin# 
+root@SampleUbuntu:/bin# find . -size +1M > /home/vboxuser/Documents/linux_training/module_2/qn1.txt
+root@SampleUbuntu:/bin# 
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+qn1.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ cat qn1.txt
+./vim.tiny
+./pnm2ppa
+./python3.10
+./Xwayland
+./udevadm
+./Xephyr
+./bash
+./nautilus
+./tcpdump
+./gpg
+./strace
+./perl
+./gnome-control-center
+./busybox
+./gtk4-encode-symbolic-svg
+./seahorse
+./snap
+./perl5.34.0
+./ubuntu-report
+./shotwell
+./gdb
+./systemctl
+./systemd-analyze
