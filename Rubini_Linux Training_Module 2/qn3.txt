@@ -1,0 +1,37 @@
+3) Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named filtered_log.txt.
+
+Output :
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+config.txt  qn1.txt  updated_config.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ vi log.log
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ cat log.log
+DEBUG: Starting the application initialization.
+ERROR: Unable to connect to the database.
+INFO: User 'admin' logged in successfully.
+DEBUG: Fetching configuration settings from the server.
+ERROR: DEBUG - Configuration settings could not be applied.
+INFO: Scheduled job 'backup' completed successfully.
+DEBUG: Connection to server timed out. Retrying...
+ERROR: Failed to fetch data from API endpoint '/users'.
+INFO: Maintenance mode activated.
+ERROR: DEBUG - Query execution failed due to a syntax error.
+DEBUG: Reloading application modules.
+ERROR: Missing required parameter in the request.
+INFO: Shutting down the system gracefully.
+DEBUG: Closing unused network connections.
+ERROR: DEBUG - Unexpected server response received.
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+config.txt  log.log  qn1.txt  updated_config.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ grep -w "ERROR" log.log | grep -v "DEBUG" > filtered_log.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ls
+config.txt  filtered_log.txt  log.log  qn1.txt  updated_config.txt
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ cat filtered_log.txt
+ERROR: Unable to connect to the database.
+ERROR: Failed to fetch data from API endpoint '/users'.
+ERROR: Missing required parameter in the request.
