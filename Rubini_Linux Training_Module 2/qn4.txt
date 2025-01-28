@@ -1,0 +1,202 @@
+4) Write a code to identify the process with the highest memory usage and then terminate it.
+
+Output :
+
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ps aux --sort=-%mem
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+vboxuser    1886  3.6 17.2 11344136 346748 ?     Sl   07:32   0:56 /snap/firefox/4848/usr/lib/firefox/firefox
+vboxuser    2546  2.6 12.3 2629552 249864 ?      Sl   07:32   0:40 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -childID 
+vboxuser    1273 15.6 12.1 3780120 244452 ?      Rsl  07:26   4:58 /usr/bin/gnome-shell
+vboxuser    2029  0.2  6.4 2458212 130316 ?      Sl   07:32   0:04 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -childID 
+vboxuser    2220  0.1  4.3 2424852 88428 ?       Sl   07:32   0:01 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -childID 
+vboxuser    2661  0.0  3.5 2394828 71424 ?       Sl   07:33   0:00 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -childID 
+vboxuser    2700  0.0  3.5 2394824 70656 ?       Sl   07:33   0:00 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -childID 
+vboxuser    2614  0.0  3.4 2394828 70400 ?       Sl   07:33   0:00 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -childID 
+vboxuser    1480  0.0  2.5 837212 52100 ?        Sl   07:26   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+vboxuser    2000  0.0  2.3 208368 47104 ?        Sl   07:32   0:00 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -parentBu
+vboxuser    1689  0.1  2.2 2656560 45324 ?       Sl   07:27   0:02 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js
+vboxuser    2423  0.0  2.1 207152 43904 ?        Sl   07:32   0:00 /snap/firefox/4848/usr/lib/firefox/firefox -contentproc -parentBu
+vboxuser    1771  0.7  2.1 570444 43624 ?        Ssl  07:27   0:14 /usr/libexec/gnome-terminal-server
+vboxuser    1322  0.0  1.7 596664 34560 ?        Sl   07:26   0:00 /usr/libexec/goa-daemon
+vboxuser    1645  0.1  1.3 738460 27972 ?        SNsl 07:26   0:03 /usr/libexec/tracker-miner-fs-3
+vboxuser    1329  0.0  1.2 718076 25472 ?        Ssl  07:26   0:00 /usr/libexec/evolution-calendar-factory
+vboxuser    1343  0.0  1.2 681044 24960 ?        Ssl  07:26   0:00 /usr/libexec/evolution-addressbook-factory
+vboxuser    1415  0.0  1.1 797904 23940 ?        Ssl  07:26   0:00 /usr/libexec/gsd-power
+vboxuser    1478  0.2  1.1 355928 23808 ?        Sl   07:26   0:05 /usr/libexec/ibus-extension-gtk3
+vboxuser    1672  0.0  1.0 2608196 21516 ?       Sl   07:26   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+vboxuser    1395  0.0  1.0 2468884 21504 ?       Sl   07:26   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+vboxuser    1133  0.1  1.0 1430892 21500 ?       S<sl 07:26   0:03 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+vboxuser    1414  0.0  1.0 725316 20612 ?        Ssl  07:26   0:00 /usr/libexec/gsd-media-keys
+vboxuser    1313  0.0  1.0 400868 20608 ?        Ssl  07:26   0:00 /usr/libexec/evolution-source-registry
+vboxuser    1656  0.0  0.9 670964 20072 ?        Ssl  07:26   0:00 /usr/libexec/xdg-desktop-portal-gnome
+vboxuser    1799  0.0  0.9 500724 19332 ?        Sl   07:27   0:00 update-notifier
+vboxuser    1407  0.0  0.9 459672 18948 ?        Ssl  07:26   0:00 /usr/libexec/gsd-color
+root         530  0.0  0.9  49724 18304 ?        Ss   07:24   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-trigg
+vboxuser    1707  0.0  0.9 352572 18180 ?        Ssl  07:27   0:00 /usr/libexec/xdg-desktop-portal-gtk
+root         884  0.0  0.8 306880 18092 ?        Ssl  07:25   0:00 /usr/libexec/packagekitd
+root         518  0.0  0.8 622064 17960 ?        Ssl  07:24   0:01 /usr/sbin/NetworkManager --no-daemon
+root         628  0.0  0.8 126844 17408 ?        Ssl  07:25   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrad
+root         540  0.1  0.8 1246000 16460 ?       Ssl  07:24   0:03 /usr/lib/snapd/snapd
+vboxuser    1424  0.0  0.8 422996 16132 ?        Ssl  07:26   0:00 /usr/libexec/gsd-wacom
+vboxuser    1301  0.0  0.7 582728 16000 ?        Sl   07:26   0:00 /usr/libexec/gnome-shell-calendar-server
+vboxuser    1413  0.0  0.7 348664 15364 ?        Ssl  07:26   0:00 /usr/libexec/gsd-keyboard
+root         191  0.0  0.7  48256 14468 ?        S<s  07:24   0:00 /lib/systemd/systemd-journald
+systemd+     391  1.4  0.6  26204 13824 ?        Ss   07:24   0:29 /lib/systemd/systemd-resolved
+root         608  0.0  0.6  81672 13568 ?        Ss   07:24   0:00 /usr/sbin/cupsd -l
+vboxuser    1598  0.0  0.6 431920 13076 ?        Sl   07:26   0:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-integra
+vboxuser    1350  0.0  0.6 347060 13056 ?        Sl   07:26   0:00 /usr/libexec/goa-identity-service
+vboxuser    1247  0.0  0.6 667112 12544 ?        Ssl  07:26   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubu
+colord      1031  0.0  0.6 253976 12336 ?        Ssl  07:25   0:00 /usr/libexec/colord
+vboxuser    1165  0.0  0.6 231700 12288 tty2     Sl+  07:26   0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+vboxuser    1408  0.0  0.6 384120 12288 ?        Ssl  07:26   0:00 /usr/libexec/gsd-datetime
+vboxuser    1644  0.0  0.5 484996 11648 ?        Ssl  07:26   0:00 /usr/libexec/xdg-desktop-portal
+root           1  0.1  0.5 166636 11644 ?        Ss   07:24   0:03 /sbin/init splash
+root         549  0.0  0.5 393024 11368 ?        Ssl  07:24   0:00 /usr/libexec/udisks2/udisksd
+vboxuser    1520  0.0  0.5 351016 11136 ?        Sl   07:26   0:00 /usr/libexec/gsd-printer
+vboxuser    1124  0.0  0.5  17896 10480 ?        Ss   07:26   0:01 /lib/systemd/systemd --user
+root         723  0.0  0.5 172060 10368 ?        Ssl  07:25   0:00 /usr/sbin/cups-browsed
+root        1112  0.0  0.5 179380 10208 ?        Sl   07:26   0:00 gdm-session-worker [pam/gdm-password]
+vboxuser    1416  0.0  0.4 258512  9600 ?        Ssl  07:26   0:00 /usr/libexec/gsd-print-notifications
+vboxuser    1307  0.0  0.4 324580  9472 ?        Ssl  07:26   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+vboxuser    1410  0.1  0.4 397680  9420 ?        Sl   07:26   0:03 /usr/bin/ibus-daemon --panel disable
+vboxuser    1419  0.0  0.4 474460  9216 ?        Ssl  07:26   0:00 /usr/libexec/gsd-sharing
+root         876  0.0  0.4 251012  8704 ?        Ssl  07:25   0:00 /usr/libexec/upowerd
+vboxuser    1423  0.0  0.4 327992  8704 ?        Ssl  07:26   0:00 /usr/libexec/gsd-sound
+root         532  0.1  0.3 236988  7804 ?        Ssl  07:24   0:02 /usr/libexec/polkitd --no-debug
+root         660  0.0  0.3 249892  7680 ?        Ssl  07:25   0:00 /usr/sbin/gdm3
+vboxuser    1383  0.0  0.3 323396  7680 ?        Sl   07:26   0:00 /usr/libexec/gvfsd-trash --spawner :1.14 /org/gtk/gvfs/exec_spaw/
+vboxuser    1412  0.0  0.3 320580  7680 ?        Ssl  07:26   0:00 /usr/libexec/gsd-housekeeping
+root         597  0.0  0.3 317964  7676 ?        Ssl  07:24   0:00 /usr/sbin/ModemManager
+root         508  0.0  0.3 248564  7644 ?        Ssl  07:24   0:00 /usr/libexec/accounts-daemon
+vboxuser    1236  0.0  0.3 249296  7552 ?        Ssl  07:26   0:00 /usr/libexec/gvfsd
+vboxuser    1359  0.0  0.3 323868  7552 ?        Ssl  07:26   0:00 /usr/libexec/gvfs-afc-volume-monitor
+vboxuser    1600  0.0  0.3 172140  7552 ?        Sl   07:26   0:01 /usr/libexec/ibus-engine-simple
+vboxuser    1484  0.0  0.3 245916  7424 ?        Sl   07:26   0:00 /usr/libexec/ibus-portal
+root         548  0.0  0.3  23644  7216 ?        Ss   07:24   0:00 /lib/systemd/systemd-logind
+vboxuser    1151  0.0  0.3 546600  7168 ?        Ssl  07:26   0:00 /usr/libexec/xdg-document-portal
+vboxuser    1271  0.0  0.3 309620  7168 ?        Sl   07:26   0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+root         533  0.0  0.3 248752  7040 ?        Ssl  07:24   0:00 /usr/libexec/power-profiles-daemon
+vboxuser    2082  0.0  0.3 1089892 7040 ?        Sl   07:32   0:00 /usr/bin/snap userd
+systemd+     392  0.0  0.3  89388  6912 ?        Ssl  07:24   0:00 /lib/systemd/systemd-timesyncd
+root         544  0.0  0.3 245156  6784 ?        Ssl  07:24   0:00 /usr/libexec/switcheroo-control
+vboxuser    1318  0.0  0.3 245292  6784 ?        Ssl  07:26   0:00 /usr/libexec/gvfs-goa-volume-monitor
+vboxuser    1368  0.0  0.3 246072  6784 ?        Ssl  07:26   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+vboxuser    1420  0.0  0.3 320956  6784 ?        Ssl  07:26   0:00 /usr/libexec/gsd-smartcard
+vboxuser    1477  0.0  0.3 245964  6784 ?        Sl   07:26   0:00 /usr/libexec/ibus-dconf
+vboxuser    1374  0.0  0.3 245116  6656 ?        Ssl  07:26   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+vboxuser    1394  0.0  0.3 162688  6656 ?        Sl   07:26   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+lp           671  0.0  0.3  16288  6528 ?        S    07:25   0:00 /usr/lib/cups/notifier/dbus dbus://
+root         233  0.0  0.3  27172  6400 ?        Ss   07:24   0:00 /lib/systemd/systemd-udevd
+systemd+     390  0.1  0.3  14836  6400 ?        Ss   07:24   0:02 /lib/systemd/systemd-oomd
+vboxuser    1405  0.0  0.3 319072  6400 ?        Ssl  07:26   0:00 /usr/libexec/gsd-a11y-settings
+vboxuser    1417  0.0  0.3 466516  6400 ?        Ssl  07:26   0:00 /usr/libexec/gsd-rfkill
+message+     515  0.0  0.3  11000  6272 ?        Ss   07:24   0:01 @dbus-daemon --system --address=systemd: --nofork --nopidfile --s
+vboxuser    1155  0.0  0.3 244808  6272 ?        Ssl  07:26   0:00 /usr/libexec/xdg-permission-store
+vboxuser    1244  0.0  0.3 455660  6144 ?        Sl   07:26   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+vboxuser    1490  0.0  0.3 232272  6144 ?        Sl   07:26   0:00 /usr/libexec/gsd-disk-utility-notify
+vboxuser    1726  0.0  0.3 171600  6144 ?        Ssl  07:27   0:00 /usr/libexec/gvfsd-metadata
+vboxuser    1146  0.0  0.2 249544  5916 ?        Sl   07:26   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+vboxuser    1156  0.0  0.2 171048  5888 tty2     Ssl+ 07:26   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubu
+vboxuser    1418  0.0  0.2 244948  5888 ?        Ssl  07:26   0:00 /usr/libexec/gsd-screensaver-proxy
+vboxuser    1541  0.0  0.2  39128  5888 ?        Ss   07:26   0:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-integra
+root        2991  0.0  0.2  22084  5608 pts/0    S    07:44   0:00 su
+vboxuser    1144  0.0  0.2   9676  5536 ?        Ss   07:26   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopi
+vboxuser    1225  0.0  0.2 100568  5376 ?        Ssl  07:26   0:00 /usr/libexec/gnome-session-ctl --monitor
+vboxuser    1339  0.0  0.2 156840  5376 ?        Ssl  07:26   0:00 /usr/libexec/dconf-service
+syslog       535  0.0  0.2 222404  5120 ?        Ssl  07:24   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         550  0.0  0.2  16504  5120 ?        Ss   07:24   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+vboxuser    1789  0.0  0.2  19664  4608 pts/0    Ss   07:27   0:00 bash
+vboxuser    1131  0.0  0.2  48236  4480 ?        S<sl 07:26   0:00 /usr/bin/pipewire
+vboxuser    1125  0.0  0.2 169792  4392 ?        S    07:26   0:00 (sd-pam)
+vboxuser    1132  0.0  0.2  32260  4096 ?        Ssl  07:26   0:00 /usr/bin/pipewire-media-session
+root        2993  0.0  0.2  18892  4096 pts/0    S+   07:44   0:00 bash
+vboxuser    1281  0.0  0.1   8432  3968 ?        S    07:26   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/ac
+vboxuser    1846  0.0  0.1  19904  3968 pts/1    Ss   07:29   0:00 bash
+vboxuser    3299  1.0  0.1  21664  3840 pts/1    R+   07:58   0:00 ps aux --sort=-%mem
+avahi        512  0.0  0.1   7628  3712 ?        Ss   07:24   0:00 avahi-daemon: running [SampleUbuntu.local]
+rtkit        787  0.0  0.1 154004  3328 ?        SNsl 07:25   0:00 /usr/libexec/rtkit-daemon
+root         514  0.0  0.1  18152  2944 ?        Ss   07:24   0:00 /usr/sbin/cron -f -P
+kernoops     755  0.0  0.1  13092  2220 ?        Ss   07:25   0:00 /usr/sbin/kerneloops
+kernoops     747  0.0  0.1  13092  2192 ?        Ss   07:25   0:00 /usr/sbin/kerneloops --test
+root         510  0.0  0.0   2816  1920 ?        Ss   07:24   0:00 /usr/sbin/acpid
+root        1163  0.0  0.0   2796  1920 ?        Ss   07:26   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype
+vboxuser    1404  0.0  0.0   2892  1664 ?        Ss   07:26   0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_TYPE
+avahi        559  0.0  0.0   7444  1280 ?        S    07:24   0:00 avahi-daemon: chroot helper
+root           2  0.0  0.0      0     0 ?        S    07:24   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    07:24   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-rcu_g]
+root           5  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-rcu_p]
+root           6  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-slub_]
+root           7  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-netns]
+root          12  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-mm_pe]
+root          13  0.0  0.0      0     0 ?        I    07:24   0:00 [rcu_tasks_kthread]
+root          14  0.0  0.0      0     0 ?        I    07:24   0:00 [rcu_tasks_rude_kthread]
+root          15  0.0  0.0      0     0 ?        I    07:24   0:00 [rcu_tasks_trace_kthread]
+root          16  0.1  0.0      0     0 ?        R    07:24   0:03 [ksoftirqd/0]
+root          17  0.0  0.0      0     0 ?        R    07:24   0:00 [rcu_preempt]
+root          18  0.0  0.0      0     0 ?        S    07:24   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    07:24   0:00 [idle_inject/0]
+root          20  0.0  0.0      0     0 ?        S    07:24   0:00 [cpuhp/0]
+root          21  0.0  0.0      0     0 ?        S    07:24   0:00 [kdevtmpfs]
+root          22  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-inet_]
+root          23  0.4  0.0      0     0 ?        I    07:24   0:09 [kworker/u2:1-events_unbound]
+root          24  0.0  0.0      0     0 ?        S    07:24   0:00 [kauditd]
+root          25  0.0  0.0      0     0 ?        S    07:24   0:00 [khungtaskd]
+root          26  0.0  0.0      0     0 ?        S    07:24   0:00 [oom_reaper]
+root          28  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-write]
+root          29  0.1  0.0      0     0 ?        S    07:24   0:02 [kcompactd0]
+root          30  0.0  0.0      0     0 ?        SN   07:24   0:00 [ksmd]
+root          31  0.0  0.0      0     0 ?        SN   07:24   0:00 [khugepaged]
+root          32  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-kinte]
+root          33  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-kbloc]
+root          34  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-blkcg]
+root          35  0.0  0.0      0     0 ?        S    07:24   0:00 [irq/9-acpi]
+root          36  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-tpm_d]
+root          37  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-ata_s]
+root          38  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-md]
+root          39  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-md_bi]
+root          40  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-edac-]
+root          41  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-devfr]
+root          42  0.0  0.0      0     0 ?        S    07:24   0:00 [watchdogd]
+root          44  0.0  0.0      0     0 ?        S    07:24   0:01 [kswapd0]
+root          45  0.0  0.0      0     0 ?        S    07:24   0:00 [ecryptfs-kthread]
+root          46  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-kthro]
+root          47  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-acpi_]
+root          48  0.0  0.0      0     0 ?        S    07:24   0:00 [scsi_eh_0]
+root          49  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-scsi_]
+root          50  0.0  0.0      0     0 ?        S    07:24   0:00 [scsi_eh_1]
+root          51  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-scsi_]
+root          54  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-mld]
+root          55  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-ipv6_]
+root          57  0.1  0.0      0     0 ?        I    07:24   0:02 [kworker/u2:5-events_power_efficient]
+root          64  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-kstrp]
+root          66  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/u3:0]
+root          79  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-charg]
+root         118  0.0  0.0      0     0 ?        S    07:24   0:00 [scsi_eh_2]
+root         119  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-scsi_]
+root         151  0.0  0.0      0     0 ?        S    07:24   0:00 [jbd2/sda3-8]
+root         152  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-ext4-]
+root         261  0.0  0.0      0     0 ?        S    07:24   0:00 [irq/18-vmwgfx]
+root         263  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-ttm]
+root         276  0.3  0.0      0     0 ?        I    07:24   0:06 [kworker/u2:6-events_unbound]
+root         280  0.3  0.0      0     0 ?        I    07:24   0:07 [kworker/u2:7-events_power_efficient]
+root         281  0.0  0.0      0     0 ?        I<   07:24   0:00 [kworker/R-crypt]
+root        1882  0.3  0.0      0     0 ?        I<   07:31   0:05 [kworker/0:0H-kblockd]
+root        2599  0.1  0.0      0     0 ?        I    07:33   0:02 [kworker/0:1-events]
+root        2808  0.0  0.0      0     0 ?        I    07:38   0:00 [kworker/0:2-cgroup_destroy]
+root        3083  0.0  0.0      0     0 ?        I<   07:47   0:00 [kworker/0:1H-kblockd]
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ps aux --sort=-%mem | awk 'NR==2{print $2}'
+1886
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ kill $(ps aux --sort=-%mem | awk 'NR==2{print $2}')
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ps aux --sort=-%mem | grep '1886'
+vboxuser    3329  0.0  0.1  17736  2560 pts/1    S+   07:59   0:00 grep --color=auto 1886
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ 
+vboxuser@SampleUbuntu:~/Documents/linux_training/module_2$ ps aux --sort=-%mem | awk 'NR==2{print $2}'
+1273
