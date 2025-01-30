@@ -1,0 +1,144 @@
+vboxuser@SampleUbuntu:~$ ls
+backup  backup_manager.sh  Desktop  Documents  Downloads  Music  Pictures  Public  snap  source  Templates  Videos
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh
+
+ERROR: Input values such as source, backup, file extension are missing
+
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh "/home/vboxuser/source" "backup"
+
+ERROR: Input values such as source, backup, file extension are missing
+
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh "/home/vboxuser/s" "backup" ".txt"
+
+Source file path : /home/vboxuser/s
+Backup file path : backup
+File extension   : .txt
+
+ERROR: Directory /home/vboxuser/s doesn't exist
+vboxuser@SampleUbuntu:~$ mkdir s
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh "/home/vboxuser/s" "backup" ".txt"
+
+Source file path : /home/vboxuser/s
+Backup file path : backup
+File extension   : .txt
+
+Directory /home/vboxuser/s already exists
+
+Directory /home/vboxuser/s is empty
+
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ls
+backup  backup_manager.sh  Desktop  Documents  Downloads  Music  Pictures  Public  s  snap  source  Templates  Videos
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh "/home/vboxuser/source" "backup" ".txt"
+
+Source file path : /home/vboxuser/source
+Backup file path : backup
+File extension   : .txt
+
+Directory /home/vboxuser/source already exists
+
+Directory backup already exists!!!
+
+*** Backing up files with their sizes ***
+
+1) FILE : /home/vboxuser/source/app.txt 	 SIZE : 29 bytes
+2) FILE : /home/vboxuser/source/file1.txt 	 SIZE : 34 bytes
+3) FILE : /home/vboxuser/source/file2.txt 	 SIZE : 34 bytes
+4) FILE : /home/vboxuser/source/question2.txt 	 SIZE : 31 bytes
+
+Files Successfully backed up to backup directory
+
+Backup summary report saved successfully at backup/backup_report.log on Thursday 30 January 2025 10:04:51 AM IST
+
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ rm -r backup
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh "/home/vboxuser/source" "backup" ".txt"
+
+Source file path : /home/vboxuser/source
+Backup file path : backup
+File extension   : .txt
+
+Directory /home/vboxuser/source already exists
+
+Directory backup created successfully!!!
+
+*** Backing up files with their sizes ***
+
+1) FILE : /home/vboxuser/source/app.txt 	 SIZE : 29 bytes
+2) FILE : /home/vboxuser/source/file1.txt 	 SIZE : 34 bytes
+3) FILE : /home/vboxuser/source/file2.txt 	 SIZE : 34 bytes
+4) FILE : /home/vboxuser/source/question2.txt 	 SIZE : 31 bytes
+
+Files Successfully backed up to backup directory
+
+Backup summary report saved successfully at backup/backup_report.log on Thursday 30 January 2025 10:05:09 AM IST
+
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ls -l backup
+total 20
+-rw-rw-r-- 1 vboxuser vboxuser  29 Jan 30 10:05 app.txt
+-rw-rw-r-- 1 vboxuser vboxuser 404 Jan 30 10:05 backup_report.log
+-rw-rw-r-- 1 vboxuser vboxuser  34 Jan 30 10:05 file1.txt
+-rw-rw-r-- 1 vboxuser vboxuser  34 Jan 30 10:05 file2.txt
+-rw-rw-r-- 1 vboxuser vboxuser  31 Jan 30 10:05 question2.txt
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ls -l backup/backup_report.log
+-rw-rw-r-- 1 vboxuser vboxuser 404 Jan 30 10:05 backup/backup_report.log
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ cat backup/backup_report.log
+--------------------------------------------------------------------
+	BackUp Report Summary on Thursday 30 January 2025 10:05:09 AM IST:
+--------------------------------------------------------------------
+
+  Total files processed           : 4
+  Total size of files backed up   : 128 bytes
+  Path to the backup directory    : backup
+
+--------------------------------------------------------------------
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ touch -m backup/question2.txt
+vboxuser@SampleUbuntu:~$ touch -m backup/file1.txt
+vboxuser@SampleUbuntu:~$ ls -lt backup
+total 20
+-rw-rw-r-- 1 vboxuser vboxuser  34 Jan 30 10:25 file1.txt
+-rw-rw-r-- 1 vboxuser vboxuser  31 Jan 30 10:24 question2.txt
+-rw-rw-r-- 1 vboxuser vboxuser 403 Jan 30 10:13 backup_report.log
+-rw-rw-r-- 1 vboxuser vboxuser  34 Jan 30 10:05 file2.txt
+-rw-rw-r-- 1 vboxuser vboxuser  29 Jan 30 10:05 app.txt
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./backup_manager.sh "/home/vboxuser/source" "backup" ".txt"
+
+Source file path : /home/vboxuser/source
+Backup file path : backup
+File extension   : .txt
+
+Directory /home/vboxuser/source already exists
+
+Directory backup already exists!!!
+
+*** Backing up files with their sizes ***
+
+1) FILE : /home/vboxuser/source/app.txt 	 SIZE : 29 bytes
+2) FILE : /home/vboxuser/source/file1.txt 	 SIZE : 34 bytes
+3) FILE : /home/vboxuser/source/file2.txt 	 SIZE : 34 bytes
+4) FILE : /home/vboxuser/source/question2.txt 	 SIZE : 31 bytes
+
+Files Successfully backed up to backup directory
+
+Backup summary report saved successfully at backup/backup_report.log on Thursday 30 January 2025 10:25:38 AM IST
+
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ls -lt backup
+total 20
+-rw-rw-r-- 1 vboxuser vboxuser 403 Jan 30 10:25 backup_report.log
+-rw-rw-r-- 1 vboxuser vboxuser  34 Jan 30 10:25 file1.txt
+-rw-rw-r-- 1 vboxuser vboxuser  31 Jan 30 10:24 question2.txt
+-rw-rw-r-- 1 vboxuser vboxuser  34 Jan 30 10:05 file2.txt
+-rw-rw-r-- 1 vboxuser vboxuser  29 Jan 30 10:05 app.txt
