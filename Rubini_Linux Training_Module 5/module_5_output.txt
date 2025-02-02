@@ -1,0 +1,209 @@
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh --help
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 1
+   Provided Arguments   : --help
+
+*************************************************
+---------------------
+  *** HELP MENU ***
+---------------------
+
+Usage: ./filename [OPTIONS]
+Options:
+  -d <directory>   Search for a keyword in all files inside the directory (recursively).
+  -k <keyword>     Keyword to search for.
+  -f <file>        Search for a keyword inside a specific file.
+  --help           Display this help menu.
+
+Examples:
+  # Recursively search a directory for a keyword
+  ./script -d logs -k error
+  
+  # Search for a keyword in a file
+  ./script -f script.sh -k TODO
+  
+  # Display the help menu
+  ./script --help
+
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -f outputredirection -k Music
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 4
+   Provided Arguments   : -f outputredirection -k Music
+
+*************************************************
+FILE      : outputredirection exists.
+KEYWORD   : 'Music' is valid and alphanumeric.
+
+---------------------------
+      SEARCHING      
+---------------------------
+
+FILE : outputredirection
+KEYWORD: 'Music' is found in outputredirection
+
+*** Search completed successfully! ***
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -d Documents -k ERROR
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 4
+   Provided Arguments   : -d Documents -k ERROR
+
+*************************************************
+
+DIRECTORY : Documents exists
+KEYWORD   : 'ERROR' is valid and alphanumeric.
+
+---------------------------
+      SEARCHING      
+---------------------------
+
+DIRECTORY : Documents
+KEYWORD: 'ERROR' is found in Documents/error.txt
+KEYWORD: 'ERROR' is found in Documents/find1.txt
+
+DIRECTORY : Documents/learning
+KEYWORD: 'ERROR' is found in Documents/learning/ex1.txt
+
+DIRECTORY : Documents/learning/link-creation
+
+DIRECTORY : Documents/learning/link-creation/link
+KEYWORD: 'ERROR' is found in Documents/learning/ss_ex1.txt
+
+DIRECTORY : Documents/learning/test1
+KEYWORD: 'ERROR' is found in Documents/learning/test1/qn1.txt
+
+DIRECTORY : Documents/learning/test1/test2
+KEYWORD: 'ERROR' is found in Documents/learning/test1/test2/file
+
+DIRECTORY : Documents/learning/test1test2
+
+DIRECTORY : Documents/linux_training
+
+DIRECTORY : Documents/linux_training/module_1
+
+DIRECTORY : Documents/linux_training/module_1/qn3
+
+DIRECTORY : Documents/linux_training/module_1/qn3/qn3a
+
+DIRECTORY : Documents/linux_training/module_1/qn5
+
+DIRECTORY : Documents/linux_training/module_2
+KEYWORD: 'ERROR' is found in Documents/linux_training/module_2/filtered_log.txt
+KEYWORD: 'ERROR' is found in Documents/linux_training/module_2/log.log
+
+DIRECTORY : Documents/linux_training/module_3
+
+DIRECTORY : Documents/linux_training/module_3/home
+
+DIRECTORY : Documents/linux_training/module_3/home/user
+
+DIRECTORY : Documents/linux_training/module_3/home/user/source
+
+DIRECTORY : Documents/linux_training/module_4
+KEYWORD: 'ERROR' is found in Documents/linux_training/module_4/script.sh
+
+DIRECTORY : Documents/linux_training/module_5
+KEYWORD: 'ERROR' is found in Documents/linux_training/module_5/checkerror.log
+KEYWORD: 'ERROR' is found in Documents/linux_training/module_5/mod5.txt
+KEYWORD: 'ERROR' is found in Documents/qn1.txt
+
+*** Search completed successfully! ***
+vboxuser@SampleUbuntu:~$ 
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -d Doc 
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 2
+   Provided Arguments   : -d Doc
+
+*************************************************
+
+[ERROR] DIRECTORY : Doc does not exist.
+
+
+---------------------------
+      SEARCHING      
+---------------------------
+
+[ERROR] ***Both directory name and file name are empty. Also check the Keyword..***
+
+
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -d Documents -g 
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 3
+   Provided Arguments   : -d Documents -g
+
+*************************************************
+
+DIRECTORY : Documents exists
+
+[ERROR] ERROR: Invalid option -g
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -d Doc 
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 2
+   Provided Arguments   : -d Doc
+
+*************************************************
+
+[ERROR] DIRECTORY : Doc does not exist.
+
+
+---------------------------
+      SEARCHING      
+---------------------------
+
+[ERROR] ***Both directory name and file name are empty. Also check the Keyword..***
+
+
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -d Documents -g 
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 3
+   Provided Arguments   : -d Documents -g
+
+*************************************************
+
+DIRECTORY : Documents exists
+
+[ERROR] ERROR: Invalid option -g
+
+vboxuser@SampleUbuntu:~$
+vboxuser@SampleUbuntu:~$
+vboxuser@SampleUbuntu:~$ ./file_analyzer.sh -d Doc -k ERROR -f output_redirection
+*************************************************
+
+   Script File Name     : ./file_analyzer.sh
+   Number of Arguments  : 6
+   Provided Arguments   : -d Doc -k ERROR -f output_redirection
+
+*************************************************
+
+[ERROR] DIRECTORY : Doc does not exist.
+
+KEYWORD   : 'ERROR' is valid and alphanumeric.
+
+[ERROR] FILE      : output_redirection does not exist.
+
+
+---------------------------
+      SEARCHING      
+---------------------------
+
+DIRECTORY : Doc
+
+*** Search completed successfully! ***
+vboxuser@SampleUbuntu:~$ 
