@@ -28,12 +28,12 @@ Traceroute is used to identify whether the packets are being transmitted or drop
 
 ## Linux Kernel's Handling of Ethernet Devices and Network Interfaces
 ### Configuration using ip command
-ip link show - To check available network interfaces
-ip link set eth0 up - To bring an interface up
-ip addr add 192.168.1.100/24 dev eth0 - To assign an IP address
+''' bash ip link show ''' - To check available network interfaces
+''' bash ip link set eth0 up ''' - To bring an interface up
+''' bash ip addr add 192.168.1.100/24 dev eth0 ''' - To assign an IP address
 
-The kernel maintains a MAC address table can be viewed by ip link show or bridge fdb show
-Packet capturing and analysis using tcpdump -i eth0
+The kernel maintains a MAC address table can be viewed by ''' bash ip link show ''' or ''' bash bridge fdb show '''
+Packet capturing and analysis using ''' bash tcpdump -i eth0 '''
 
 ## Inspecting the mac address table
 ![{1A977FDD-F994-4DB7-AAE5-837D32ED6834}](https://github.com/user-attachments/assets/9b727bc7-831c-4277-b586-8604bea10759)
