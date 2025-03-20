@@ -4,8 +4,7 @@
 ### Capture and analyze ARP packets using Wireshark. Inspect the ARP request and reply frames when your device attempts to find the router's MAC address. Discuss the importance of ARP in packet forwarding
 
 First create multiple files 
-
-![all](arp.png)
+![image](https://github.com/user-attachments/assets/6a0c7594-4f70-4ebd-a649-452c9203a17d)
 
 ## Question - 03
 
@@ -25,7 +24,7 @@ The IP address 192.168.10.5 belongs to Class C (192.0.0.0 - 223.255.255.255) and
 
 ### In Cisco Packet Tracer, configure NAT on a router to allow internal devices (192.168.1.x) to access the internet. Test connectivity by pinging an external public IP.
 
-![all](NAT.png)
+![image (1)](https://github.com/user-attachments/assets/f2cc5596-9dea-4ae7-bf33-aae9e2b11577)
 
 ```bash
 
