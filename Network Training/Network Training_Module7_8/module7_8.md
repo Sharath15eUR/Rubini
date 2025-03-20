@@ -1,4 +1,4 @@
-# Assignment 4
+# Assignment 5
 
 ## 1) Test-Connection and nslookup commands for websites
 #### Using Test-Connection command in windows
@@ -145,7 +145,7 @@ over a maximum of 30 hops:
 Trace complete.
 ```
 
-## 4) Setup trunk port between switches 
+## 4) Setup trunk port between switches and Try ping between different VLANs.
 ![Screenshot 2025-03-17 145649](https://github.com/user-attachments/assets/91b0ea18-0a96-4e8b-8124-8559e89e4eda)
 ![Screenshot 2025-03-17 145610](https://github.com/user-attachments/assets/425302c6-49a0-4464-8335-a7a71f2e3175)
 
