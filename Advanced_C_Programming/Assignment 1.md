@@ -198,7 +198,7 @@ int main() {
 }
 ```
 
-## Assingnment 3 : Arrays 
+## Question 3 : Arrays 
 
 ```#include <stdio.h>
 #include <stdbool.h>
