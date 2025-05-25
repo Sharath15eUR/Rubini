@@ -1,5 +1,6 @@
 #    Assignment 1
-## Question 1 :
+
+## Question 1 :  C program that represents the calender for the week
 ```
 #include <stdio.h>
 #include <string.h>
@@ -110,6 +111,143 @@ int main() {
                 printf("Invalid choice. Please enter 1, 2, or 3.\n");
         }
     } while (choice != 3);
+
+    return 0;
+}
+```
+
+## Question 2 : Pointers
+
+```#include <stdio.h>
+#include <stdlib.h>
+
+// Rearranging array so that even numbers come first, preserving relative order
+void rearrange(int *arr, int size) {
+    int *temp = (int *)malloc(size * sizeof(int));
+    if (temp == NULL) {
+        printf("Memory allocation failed.\n");
+        return;
+    }
+
+    int *writePtr = temp;
+
+    // Copying even numbers first
+    for (int *ptr = arr; ptr < arr + size; ptr++) {
+        if (*ptr % 2 == 0) {
+            *writePtr = *ptr;
+            writePtr++;
+        }
+    }
+
+    // Then Copying odd numbers
+    for (int *ptr = arr; ptr < arr + size; ptr++) {
+        if (*ptr % 2 != 0) {
+            *writePtr = *ptr;
+            writePtr++;
+        }
+    }
+
+    // Copying back to the original array
+    for (int i = 0; i < size; i++) {
+        *(arr + i) = *(temp + i);
+    }
+
+    free(temp);
+}
+
+// Printing array values using pointer arithmetic
+void printArray(const int *arr, int size) {
+    for (const int *ptr = arr; ptr < arr + size; ptr++) {
+        printf("%d ", *ptr);
+    }
+    printf("\n");
+}
+
+int main() {
+    int size;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &size);
+
+    if (size <= 0) {
+        printf("Invalid array size.\n");
+        return 1;
+    }
+
+    int *arr = (int *)malloc(size * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    printf("Enter %d integers:\n", size);
+    for (int *ptr = arr; ptr < arr + size; ptr++) {
+        scanf("%d", ptr);
+    }
+
+    printf("\nOriginal:   ");
+    printArray(arr, size);
+
+    rearrange(arr, size);
+
+    printf("Rearranged: ");
+    printArray(arr, size);
+
+    free(arr);
+    return 0;
+}
+```
+
+## Assingnment 3 : Arrays 
+
+```#include <stdio.h>
+#include <stdbool.h>
+
+bool searchMatrix(int matrix[][100], int n, int key) {
+    int row = 0, col = n - 1;  // Start from top-right
+
+    while (row < n && col >= 0) {
+        if (matrix[row][col] == key)
+            return true;
+        else if (matrix[row][col] > key)
+            col--;  // Move left
+        else
+            row++;  // Move down
+    }
+    return false;
+}
+
+void printMatrix(int matrix[][100], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%4d", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int n, key;
+    int matrix[100][100];
+
+    printf("Enter the size of the matrix (n x n): ");
+    scanf("%d", &n);
+
+    printf("Enter the elements: \n");
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &matrix[i][j]);
+
+    printf("\nMatrix:\n");
+    printMatrix(matrix, n);
+
+    printf("\nEnter the key to search: ");
+    scanf("%d", &key);
+
+    if (searchMatrix(matrix, n, key))
+        printf("Key %d found.\n", key);
+    else
+        printf("Key %d not found.\n", key);
 
     return 0;
 }
